@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. ПЕРЕВОДЫ ---
+
     const translations = {
         ru: {
             nav_login_btn: "Рег./Вход", opt_title: "Оптимизация", opt_desc: "Как наше ПО оптимизировано для максимального FPS.",
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentLang = 'ru';
 
-    // --- 2. ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ---
+
     const langBtn = document.getElementById('lang-toggle');
     function updateLanguage() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. ПЕРЕКЛЮЧЕНИЕ ТЕМЫ ---
+
     const themeBtn = document.getElementById('theme-toggle');
     const themeImg = document.getElementById('theme-img');
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. НАВИГАЦИЯ ---
+
     const mainPage = document.getElementById('main-page');
     const authPage = document.getElementById('auth-page');
     const navLoginBtn = document.getElementById('nav-login');
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. АВТОРИЗАЦИЯ / РЕГИСТРАЦИЯ ---
+
     const toggleAuthMode = document.getElementById('toggle-auth-mode');
     const authTitle = document.getElementById('auth-title');
     const authSubtitle = document.getElementById('auth-subtitle');
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. МОДАЛЬНЫЕ ОКНА ---
+
     const modals = document.querySelectorAll('.modal-overlay');
     const closeBtns = document.querySelectorAll('.modal-close');
     const openDownloadBtn = document.getElementById('open-download');
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') closeAllModals();
     });
 
-    // --- 7. ДОКУМЕНТЫ ---
+
     const docLinks = document.querySelectorAll('.doc-link');
     const docTexts = {
         ru: {
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 8. ЮТУБ ---
+
     const videoBlock = document.getElementById('video-block');
     if (videoBlock) {
         videoBlock.addEventListener('click', () => {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 9. АНИМАЦИИ ---
+
     if (typeof VanillaTilt !== 'undefined') {
         VanillaTilt.init(document.querySelectorAll('.tilt-card'), {
             max: 15,
@@ -210,6 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Запускаем перевод при старте
+
     updateLanguage();
 });
