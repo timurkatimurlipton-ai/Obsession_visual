@@ -27,7 +27,7 @@
 
 body {
     background-color: var(--bg-color);
-    /* Фон для темной темы */
+    
     background-image: url('my_background1.jpg');
     background-size: cover;
     background-position: center;
@@ -340,7 +340,7 @@ p { color: var(--text-muted); line-height: 1.5; font-size: 0.95rem; }
     }
 }
 
-/* --- СТИЛИ ДЛЯ МЕЧА В КАРТОЧКЕ "СКАЧАТЬ" (КРУТИТСЯ ТОЛЬКО ПРИ НАВОДКЕ) --- */
+
 .download-sword-wrapper {
     display: flex;
     justify-content: center;
