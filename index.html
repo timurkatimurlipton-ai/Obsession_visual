@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsession Visual Mod</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+<!-- ГЛАВНАЯ СТРАНИЦА -->
+<main id="main-page" class="page active flex-page">
+
+    <header class="glass-panel slim-header">
+        <div class="header-left">
+            <button id="theme-toggle" class="theme-toggle-btn" title="Сменить тему">
+                <img id="theme-img" src="Night.png" alt="Toggle Theme" class="theme-switch-img">
+            </button>
+        </div>
+        <div class="header-center">
+            <button id="lang-toggle" class="btn text-btn">RU / EN</button>
+        </div>
+        <div class="header-right">
+            <button id="nav-login" class="btn primary-btn btn-sm" data-i18n="nav_login_btn">Рег./Вход</button>
+            <div id="user-avatar" class="avatar mini-avatar bg-purple hidden">R</div>
+        </div>
+    </header>
+
+    <div class="dashboard-grid">
+        <!-- Оптимизация -->
+        <div class="card glass-panel tilt-card">
+            <h2 data-i18n="opt_title">Оптимизация</h2>
+            <p data-i18n="opt_desc">Как наше ПО оптимизировано для максимального FPS.</p>
+            <div class="fake-graph">
+                <svg viewBox="0 0 100 40" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block; overflow: visible;">
+                    <path d="M0,40 Q30,35 60,15 T100,5 L100,40 L0,40 Z" fill="url(#graph-gradient)" opacity="0.4"/>
+                    <path d="M0,40 Q30,35 60,15 T100,5" fill="none" stroke="var(--primary-color)" stroke-width="2.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="graph-gradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="var(--primary-color)"/>
+                            <stop offset="100%" stop-color="transparent"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Визуальные Эффекты -->
+        <div class="card glass-panel col-span-2 tilt-card">
+            <h2 data-i18n="vis_title">Визуальные Эффекты</h2>
+            <p data-i18n="vis_desc">Потрясающая красота графики.</p>
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('суп.png');"></div>
+                <div class="gallery-item" style="background-image: url('суп1.png');"></div>
+            </div>
+        </div>
+
+        <!-- Наша Команда -->
+        <div class="card glass-panel tilt-card">
+            <h2 data-i18n="team_title">Наша Команда</h2>
+            <ul class="team-list">
+                <li>
+                    <div class="avatar bg-purple">R</div>
+                    <div>
+                        <strong>rrkou4</strong>
+                        <span data-i18n="role_lead">Lead Developer</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="avatar bg-blue">N</div>
+                    <div>
+                        <strong>Nura</strong>
+                        <span data-i18n="role_texture">Texture Artist</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Скачать Визуал -->
+        <!-- Скачать Визуал -->
+        <div class="card glass-panel tilt-card interactive" id="open-download">
+            <h2 data-i18n="download_title">Скачать Визуал</h2>
+            <p data-i18n="download_desc">Нажми, чтобы скачать</p>
+            <div class="download-sword-wrapper">
+                <img src="Sword.png" alt="Download Sword" class="download-sword">
+            </div>
+        </div>
+
+        <!-- Мой профиль -->
+        <div class="card glass-panel tilt-card interactive" id="open-profile">
+            <h2 data-i18n="profile_title">Мой профиль</h2>
+            <p data-i18n="profile_desc">Нажми, чтобы открыть</p>
+            <div class="chicken-wrapper">
+                <img src="Profile.png" alt="Chicken Profile" class="chicken-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- ОБЗОР И ОТЗЫВЫ -->
+    <div class="reviews-section glass-panel">
+        <h2 style="margin-bottom: 20px; text-align: center;" data-i18n="reviews_title">Обзор и отзывы</h2>
+        <div class="reviews-content">
+            <!-- Блок с видео (Превью открывает кликом YouTube) -->
+            <div class="video-block" id="video-block" title="Нажмите, чтобы смотреть на YouTube">
+                <div class="video-preview" style="background-image: url('превью.png');">
+                    <div class="play-btn-overlay">▶</div>
+                </div>
+            </div>
+
+            <!-- Блок с отзывами -->
+            <div class="reviews-list">
+                <div class="review-item">
+                    <div class="stars">
+                        <img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star">
+                    </div>
+                    <strong>Mihail_Pro</strong>
+                    <p data-i18n="review_1">Отличный мод, FPS реально вырос, визуалы просто топ! Всем советую.</p>
+                </div>
+                <div class="review-item">
+                    <div class="stars">
+                        <img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star">
+                    </div>
+                    <strong>DarkSniper</strong>
+                    <p data-i18n="review_2">Никаких лагов, играю с кайфом. Настройка заняла буквально пару минут.</p>
+                </div>
+                <div class="review-item">
+                    <div class="stars">
+                        <img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star"><img src="Star.png" alt="star">
+                    </div>
+                    <strong>Dava_Standoff_UA</strong>
+                    <p data-i18n="review_3">Разработчики молодцы, быстро отвечают на вопросы в поддержке. Софт пушка!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ПОДВАЛ (ФУТЕР) -->
+    <footer class="new-footer glass-panel">
+        <div class="footer-logo">
+            <span class="animated-star">✦</span> Obsession 2026
+        </div>
+        <div class="footer-credits">
+            <span data-i18n="footer_project">Проект от:</span> <span class="highlight">rrkou4</span>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="doc-link" data-doc="policy" data-i18n="footer_policy">Политика</a> •
+            <a href="#" class="doc-link" data-doc="terms" data-i18n="footer_terms">Согласие</a> •
+            <a href="#" class="doc-link" data-doc="offer" data-i18n="footer_offer">Оферта</a> •
+            <a href="#" class="doc-link" data-doc="rules" data-i18n="footer_rules">Правила</a>
+        </div>
+        <div class="footer-copyright" data-i18n="footer_copy">
+            © 2026 Obsession. Все права защищены.
+        </div>
+    </footer>
+</main>
+
+<!-- СТРАНИЦА АВТОРИЗАЦИИ -->
+<section id="auth-page" class="page flex-page">
+    <button id="nav-back" class="btn glass-btn back-btn"><span data-i18n="back_btn">❮ Назад</span></button>
+
+    <div class="auth-center-wrapper">
+        <!-- Анимированный меч на фоне -->
+        <img src="Sword.png" alt="Neon Sword" class="neon-sword-bg">
+
+        <div class="auth-form-container glass-panel">
+            <h1 id="auth-title" data-i18n="auth_welcome">С возвращением</h1>
+            <p id="auth-subtitle" data-i18n="auth_subtitle" class="subtitle">Начни свой путь прямо сейчас</p>
+
+            <form id="login-form">
+                <input type="text" placeholder="Логин или e-mail" data-i18n-placeholder="auth_login_ph" class="glass-input" required>
+                <input type="password" placeholder="Введите пароль" data-i18n-placeholder="auth_pass_ph" class="glass-input" required>
+
+                <div class="auth-options">
+                    <label><input type="checkbox"> <span data-i18n="auth_remember">Запомнить меня</span></label>
+                </div>
+
+                <button type="submit" class="btn primary-btn submit-btn" data-i18n="form_login_btn">Войти</button>
+            </form>
+
+            <p class="register-link"><span data-i18n="auth_no_acc">Нет аккаунта?</span> <a href="#" id="toggle-auth-mode" data-i18n="auth_reg">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- МОДАЛЬНЫЕ ОКНА -->
+<div id="download-modal" class="modal-overlay">
+    <div class="modal-content glass-panel">
+        <button class="btn close-btn modal-close">✖</button>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 10px;">
+            <h2 style="margin: 0; font-size: 1.4rem;" data-i18n="modal_download_title">Скачать Soup Visuals</h2>
+            <a href="https://modrinth.com/mod/soup-api/versions" class="btn primary-btn" style="text-decoration: none; padding: 10px 20px; font-weight: bold;" data-i18n="modal_download_btn">Скачать</a>
+        </div>
+        <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted); margin-top: 25px;" data-i18n="press_esc">Нажмите ESC для закрытия</p>
+    </div>
+</div>
+
+<div id="profile-modal" class="modal-overlay">
+    <div class="modal-content glass-panel">
+        <button class="btn close-btn modal-close">✖</button>
+        <h2 data-i18n="profile_title">Мой профиль</h2>
+        <div id="profile-content">
+            <p style="text-align: center; color: var(--text-muted);" data-i18n="modal_profile_info">Здесь будет информация о профиле пользователя.</p>
+        </div>
+    </div>
+</div>
+
+<div id="docs-modal" class="modal-overlay">
+    <div class="modal-content glass-panel" style="max-width: 500px;">
+        <button class="btn close-btn modal-close">✖</button>
+        <h2 id="docs-title" data-i18n="modal_docs_title">Документ</h2>
+        <div class="glass-panel" style="padding: 20px; font-size: 0.9rem; max-height: 50vh; overflow-y: auto; text-align: left; background: var(--input-bg);">
+            <p id="docs-content" style="white-space: pre-line; color: var(--text-main);">Текст документа...</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
